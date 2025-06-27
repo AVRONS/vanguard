@@ -67,10 +67,23 @@ table {
 /* MIN-WIDTH OF THE PAGE SHOULD NOT GO BELOW 400PX */
 
 /* ADD A DIV WITH THE CLASS OF CONTAINER TO EVERY CONTENT CONTAINER THIS IS ALLOW THE BASE ELEMENTS TO BE 100% WIDTH, BUT CONSTRAIN THE ACTUAL CONTENT TO 90% */
+
+body{
+    font-family: var(--font);
+    line-height: 1.6;
+    color:var(--white);
+    background-color:var(--white);
+    min-width: 400px;
+
+}
+
+
+
 .container {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 1rem 2rem 1rem;
 }
 
 /* ADD TO "INNOVATION & INVESTMENT SECTION (Photo by Kevin Matos on Unsplash) */
@@ -208,9 +221,109 @@ table {
       padding: 0.5 rem .5rem;
       display: block;
       text-transform: uppercase;
-      
+      background: var(--blue);
+      color: var(--black);
     }
 
 
+    .hero{
+        background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85));
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        padding: 1rem;
+        text-align: center;
+        overflow: hidden;
+        position: relative;
+        height: 1000px;
+        
+    }
+
+    .hero-content{
+        background: rgba(24, 24, 24, 0.2);
+        backdrop-filter: blur (10px);
+        text-align: center;
+        margin: 0 1rem;
+        
+    }
+
+    .hero h2{
+       color: var(--black);
+       margin-bottom: 1rem;
+       position: relative;
+       z-index: 2;
+       bottom: -200px;
+    }
+
+    .about{
+        padding-top: 2rem;
+        background-color: var(--white);
+        color: var(--black);
+    }
+
+
+    .about h2{
+        font-weight: 700;
+        color: #000000;
+        margin-bottom: 1rem;
+        margin-left: 1rem;
+        text-align: left;
+    }
+
+    .about p{
+        line-height: 1.8;
+        margin: 0 auto;
+        text-align: left;
+    }
+
+    .services{
+        padding: 1rem 0 2rem 0;
+        background-color:var(--white)
+    }
+
+    .services h2{
+        font-weight: 700;
+        color: black;
+        margin-bottom: 3rem;
+        text-align: left;
+        margin-left: left;
+       
+
+    }
+
+    .service-grid{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+    
+    /* Global Service card setting */
+    .service-card{
+        background-color: var(--blue);
+        padding: 1rem;
+        border-radius: 10px;
+        color: var(--white);
+        width: 350px;
+
+    }
+
+    .service-card h3{
+        color: var(--white);
+        margin-bottom: 1rem;
+        margin-left: 1rem;
+        font-weight: 600;
+    }
+
+    .service-card p{
+        color: var(--white);
+        line-height: 1.6;
+    }
+
 
 /* MEDIA QUERIES (LARGE) */
+@media (mind-width:1024){
+    .service-grid{
+        grid-template-columns: repeat(3,1fr);
+        gap: 3rem;
+    }
+}
