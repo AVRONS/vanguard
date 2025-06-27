@@ -160,16 +160,24 @@ table {
     }
 
     .top-logo{
-        width: 100px;
-        height: 100px;
+        width: 50px;
+        height: 50px;
+        position: relative;
+        bottom: 40px;
     }
 
     .title-top{
         color: var(--blue);
-        font-size: 2rem;
-        padding-left: 110px;
+        font-size: 3rem;
+        padding-left: 70px;
         margin-bottom: 1px;
-        line-height: 1;
+       font-weight: 500;
+       position: relative;
+       bottom: -15px;
+    }
+
+    .nav-right{
+        display: flex;
     }
 
 /* MEDIA QUERIES (LARGE) */
