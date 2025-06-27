@@ -361,6 +361,14 @@ body{
         background-color: var(--black);
         color: var(--white);
         box-shadow: 0 2px 15px; 
+        width:100%;
+        overflow: hidden;
+    }
+
+     thead{
+        background-color: var(--black);
+        color: var(--white);
+     
         
 
     }
@@ -368,6 +376,7 @@ body{
     th, td{
         padding: 1rem;
         text-align: center;
+        border-bottom: 5px solid var(--charcoal)
         
         
     }
@@ -376,6 +385,11 @@ body{
         font-weight: 600;
     }
 
+    tbody tr:nth-child(odd){
+        background-color: #333333;
+    }
+
+    
 
 /* MEDIA QUERIES (LARGE) */
 @media (mind-width:1024){
