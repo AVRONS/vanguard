@@ -88,15 +88,42 @@ body{
 }
 
 /* ADD TO "INNOVATION & INVESTMENT SECTION (Photo by Kevin Matos on Unsplash) */
-.d
-{
-    background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('images/vanguard-hero.jpg') no-repeat center center/cover;
-    height: 80vh;
+.hero{
+   background: 
+  linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)),
+  url('assets/vanguard-hero.jpg') center center / cover no-repeat;
+min-height: 100vh;
     display: grid;
     place-items: center;
     text-align: center;
     padding: 1rem;
     overflow: hidden;
+    position: relative;
+     width: 50%;
+  height: auto;
+  object-fit: contain
+}
+
+
+.hero-img{
+    background: 
+  linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)),
+  url('assets/vanguard-hero.jpg') center center / cover no-repeat;
+min-height: 100vh;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    padding: 1rem;
+    overflow: hidden;
+    position: relative;
+
+}
+
+.hero h2{
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 1rem;
+    position: relative;
 }
 
 /* ADD FLOATING SVG LOGO BEFORE THE H1 */
@@ -128,21 +155,33 @@ body{
 /* THIS ONE IS DONE FOR YOU */
 
 
-@keyframes stepUp {
-    0% {
-        height: 0;
-    }
-    100% {
-        height: var(--height);
-    }
-}
-/* ADD ANIMATION ON stepUp for 1s ease-in-out forwards */
+
+
 .bar {
     animation: stepUp 1s ease-in-out forwards;
 }
 
 
 /* MEDIA QUERIES (MEDIUM) */ 
+
+@media (min-width: 800px) {
+    .service-grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .results-container{
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    .results-table{
+        width: 50%;
+
+        .bar-chart{
+            width: 50%;
+        }
+}
+}
 
     #results {
         grid-template-columns: 1fr 1fr;
@@ -158,14 +197,14 @@ body{
         width: 50%;
     }
 
-    .top-logo{
+    .nav-logo{
         width: 50px;
         height: 50px;
         position: relative;
         bottom: 40px;
     }
 
-    .title-top{
+    .nav-brand{
         color: var(--blue);
         font-size: 3rem;
         padding-left: 70px;
@@ -174,7 +213,7 @@ body{
        position: relative;
        bottom: -15px;
        background-color: var(--black);
-        color: var(--white);
+        
     }
 
     .nav-right{
@@ -275,6 +314,7 @@ body{
         margin-bottom: 3rem;
         text-align: left;
         margin-left: left;
+        animation: fadeInDown 0.5s ease-out forwards;
        
 
     }
@@ -292,7 +332,13 @@ body{
         border-radius: 10px;
         color: var(--white);
         width: 350px;
+        transition: transform 0.6s ease, box-shadow 0.5s ease;
 
+    }
+
+    .service-card:hover{
+        transform: translate(-5px);
+        box-shadow: 0 8px 30px;
     }
 
     .service-card h3{
@@ -320,6 +366,7 @@ body{
         margin-bottom: 1rem;
         margin-left: 1rem;
         text-align: left;
+        animation: fadeInDown 1.0s ease out forwards;
     }
 
 
@@ -340,7 +387,8 @@ body{
     .results-table h3{
         color: var(--white);
         margin-left: 1rem;
-        text-align: left;
+        text-align: left; 
+        animation: fadeInDown 1.5s ease-out forwards;
 
     }
 
@@ -400,6 +448,7 @@ body{
         background: black;
         border-radius: 5px;
         position: relative;
+        animation: stepUp 1s ease-in-out forwards;
 
     }
     
@@ -458,6 +507,7 @@ body{
         margin-bottom: 1rem;
         text-align: left;
         margin-left: 1rem;
+        animation: fadeInDown 0.8s ease-out forwards;
         
 
         
@@ -531,7 +581,7 @@ body{
     padding-left: 2rem;
     border-radius: 10px;
     height: 50px;
-
+    transition: 0.8s ease;
 }
 
 
