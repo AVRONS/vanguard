@@ -64,9 +64,10 @@ table {
 
 /* GLOBAL STYLES (MOBILE FIRST (SMALL) */
 
-/* MIN-WIDTH OF THE PAGE SHOULD NOT GO BELOW 400PX */
+*{
+    box-sizing: border-box;
+}
 
-/* ADD A DIV WITH THE CLASS OF CONTAINER TO EVERY CONTENT CONTAINER THIS IS ALLOW THE BASE ELEMENTS TO BE 100% WIDTH, BUT CONSTRAIN THE ACTUAL CONTENT TO 90% */
 
 body{
     font-family: var(--font);
@@ -89,41 +90,54 @@ body{
 
 /* ADD TO "INNOVATION & INVESTMENT SECTION (Photo by Kevin Matos on Unsplash) */
 .hero{
-   background: 
-  linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)),
-  url('assets/vanguard-hero.jpg') center center / cover no-repeat;
-min-height: 100vh;
-    display: grid;
-    place-items: center;
-    text-align: center;
-    padding: 1rem;
-    overflow: hidden;
-    position: relative;
-     width: 50%;
-  height: auto;
-  object-fit: contain
+
+    background-image: linear-gradient(0,0,0,0.85), rgba(0,0,0,0.85) ur
 }
 
 
-.hero-img{
-    background: 
-  linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)),
-  url('assets/vanguard-hero.jpg') center center / cover no-repeat;
-min-height: 100vh;
-    display: grid;
-    place-items: center;
-    text-align: center;
-    padding: 1rem;
-    overflow: hidden;
-    position: relative;
 
-}
+
+  
+  
+ 
+
+
+
+
+
 
 .hero h2{
     font-weight: 700;
-    color: var(--white);
+    color: var(--red);
     margin-bottom: 1rem;
     position: relative;
+    z-index: 2;
+    animation: fadeInDown 0.8s ease-out forwards;
+    animation-delay: 0.5s;
+    bottom: 50px;
+}
+
+
+.hero p{
+    color: var(--white);
+    margin-bottom: 2rem;
+    z-index: 2;
+    text-align: center;
+}
+
+.consulting{
+    background-color: var(--blue);
+    color: var(--white);
+    border-radius: 8px;
+    border: 1px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+    position: relative;
+    z-index: 2;
+    animation: fadeInDown 1.5s ease out forwards;
+    animation-delay: 0.6s;
+    
 }
 
 /* ADD FLOATING SVG LOGO BEFORE THE H1 */
@@ -137,22 +151,7 @@ min-height: 100vh;
     background: url('images/vanguard-logo.svg') no-repeat center/contain;
 
 }
-/* THIS ONE IS DONE FOR YOU */
-#bar-chart {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    align-items: flex-end;
-    justify-content: space-around;
-    gap: 1rem;
-    height: 300px;
-    width: 100%;
-    max-width: 800px;
-    padding: 1rem;
-    position: relative;
-}
-/* ADD ON TRANSITION ON HEIGHT */
 
-/* THIS ONE IS DONE FOR YOU */
 
 
 
@@ -182,6 +181,45 @@ min-height: 100vh;
         }
 }
 }
+
+
+/* /* MEDIA QUERIES (Large) */ 
+  @media (min-width:1024px) {
+    .service-grid{
+        grid-template-columns: 3, 1fr;
+        gap: 3rem;
+    }
+
+       .nav-brand{
+        gap: 3rem;
+       }
+
+       .contact-form{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem 2rem;
+        max-width: 1024px;
+       }
+    .form-group{
+        flex: 1 1 45%;
+        min-width: 300px;
+    }
+
+    .form-group textarea{
+        min-width: 100%;
+        max-width: 100%;
+
+        .submit-button{
+            align-self: start;
+            margin-left: 0;
+            margin-right: 0;
+            flex-grow: 1;
+            flex-basis: 0;
+        }
+
+    }
+  }
+
 
     #results {
         grid-template-columns: 1fr 1fr;
@@ -221,8 +259,10 @@ min-height: 100vh;
         flex-direction: column;
         align-items: flex-end;
         justify-content: flex-start;
-        padding: 2rem;
-        
+        padding: 1rem;
+           position: relative;
+  top: -100px; /* Move up */
+
         
         
 
@@ -588,6 +628,34 @@ min-height: 100vh;
 .submit-button:hover{
     background-color: orangered;
     color: var(--white);
+}
+
+
+.footer{
+    background-color: var(--black);
+    color: var(--white);
+    padding: 2rem 0;
+    text-align: center;
+}
+
+
+.footer-contact{
+    margin-top: 3rem;
+
+}
+
+.footer-contact p{
+ margin-right: 1rem;
+}
+
+.footer-contact a{
+    color: var(--blue);
+    transition: 1.8 ease;
+
+}
+
+.footer-contact a:hover{
+    color: var(--blue);
 }
 
     
